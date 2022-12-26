@@ -19,7 +19,7 @@
 ## Запуск консольного приложения
 
 1. Склонировать проект из github
-    ```git clone https://github.com/nnstu-appmath/Webam```
+    ```git clone https://github.com/nnstu-appmath/Graduates_NNTU_DataBase```
 2. В Intellij IDEA создать конфигурацию в виде консольного приложения
 3. В коде класса Main, в методе clientCode() сформировать запрос через статические методы класса GraduatesDAO
 4. Запустить конфигурацию
