@@ -8,7 +8,7 @@
 ## Запуск приложения на локальном сервере
 
 1. Склонировать проект из github
-    ```git clone https://github.com/nnstu-appmath/Webam```
+    ```git clone https://github.com/nnstu-appmath/Graduates_NNTU_DataBase```
 2. В Intellij IDEA создать конфигурацию Tomcat и указать путь к папке
 3. Запустить конфигурацию
 4. Перейти в любом браузере по адресу
