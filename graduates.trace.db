@@ -1,0 +1,53 @@
+2022-12-09 17:59:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GRADUATES" not found (this database is empty); SQL statement:
+SELECT * FROM GRADUATES [42104-214]
+2022-12-09 18:06:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Метод разрешен только для запросов. Используйте execute или executeUpdate вместо executeQuery
+Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+create table GRADUATES
+(
+    UNIVERSITY_ENTRANCE    INTEGER,
+    UNIVERSITY_GRADUATION  INTEGER,
+    FORMAT_OF_EDUCATION    CHARACTER LARGE OBJECT,
+    DEGREE                 CHARACTER LARGE OBJECT,
+    BIRTH_YEAR             INTEGER,
+    PROFESSIONAL_DIRECTION CHARACTER LARGE OBJECT,
+    HOMETOWN               CHARACTER LARGE OBJECT,
+    CURRENT_RESIDENCE      CHARACTER LARGE OBJECT
+) [90002-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.Prepared.query(Prepared.java:256)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:251)
+	at org.h2.command.Command.executeQuery(Command.java:190)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:128)
+	at data_base_code.GraduatesDAO.foo(GraduatesDAO.java:32)
+	at data_base_code.Main.clientCode(Main.java:8)
+	at data_base_code.Main.main(Main.java:15)
+2022-12-09 18:14:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Метод разрешен только для запросов. Используйте execute или executeUpdate вместо executeQuery
+Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+DROP TABLE GRADUATES [90002-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.Prepared.query(Prepared.java:256)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:251)
+	at org.h2.command.Command.executeQuery(Command.java:190)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:128)
+	at data_base_code.GraduatesDAO.foo(GraduatesDAO.java:22)
+	at data_base_code.Main.clientCode(Main.java:8)
+	at data_base_code.Main.main(Main.java:15)
+2022-12-09 18:37:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "'.*full-time.*'"
+Data conversion error converting "'.*full-time.*'"; SQL statement:
+SELECT * FROM GRADUATES WHERE UNIVERSITY_GRADUATION LIKE ? [22018-214]
+2022-12-09 18:40:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "'.*full-time.*'"
+Data conversion error converting "'.*full-time.*'"; SQL statement:
+SELECT * FROM GRADUATES WHERE UNIVERSITY_GRADUATION LIKE ? [22018-214]
